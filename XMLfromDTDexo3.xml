@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<stock>
+    <new-car>
+        <model> Reneault </model>
+        <price> 20 000</price>
+        <mileage> blanc </mileage>
+        <condition> 1 </condition>
+    </new-car>
+    <used-car>
+        <model> Fiat </model>
+        <price> 14 000</price>
+        <mileage> rouge </mileage>
+        <condition> 0 </condition>
+    </used-car>
+</stock>
