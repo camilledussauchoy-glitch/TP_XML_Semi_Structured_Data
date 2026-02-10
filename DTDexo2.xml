@@ -1,0 +1,9 @@
+<!DOCTYPE shiporder
+[
+<!ELEMENT shiporder (orderid)>
+<!ELEMENT orderperson (#PCDATA)>
+<!ELEMENT shipto (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT  item (title, note*, quantity*, price+)>
+]>
