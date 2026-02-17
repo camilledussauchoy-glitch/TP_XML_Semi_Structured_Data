@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE jeu[
+<!ELEMENT jeu (equipe)*>
+<!ELEMENT equipe (interne | externe | joueurs)*>
+<!ELEMENT interne (joueurs)*>
+<!ELEMENT externe (joueurs)*>
+<!ELEMENT joueurs (numero, but*, penalites*, cartons_jaunes?, cartons_rouges?)>
+<!ELEMENT but (moment)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT moment (#PCDATA)>
+<!ELEMENT penalites (#PCDATA)>
+<!ELEMENT cartons_jaunes (#PCDATA)>
+<!ELEMENT cartons_rouges (#PCDATA)> 
+]>
+
+<jeu>
+    <equipe>
+        <interne>
+            <joueurs> 
+                <numero> 7 </numero>
+                <but>  
+                    <moment> 30th min</moment>
+                </but>
+                <penalites> 2 </penalites>
+                <cartons_jaunes> 3 </cartons_jaunes>
+                <cartons_rouges> 1 </cartons_rouges>
+            </joueurs>
+            <joueurs> 
+                <numero> 2 </numero>
+                <but> 
+                    <moment> 10th min</moment>
+                </but>
+                <but> 
+                    <moment> 40th min</moment>
+                </but>
+                <penalites> 1 </penalites>
+                <cartons_rouges> 1 </cartons_rouges>
+            </joueurs>
+        </interne>
+        </equipe>
+        <equipe>
+        <externe>
+            <joueurs> 
+                <numero> 5 </numero> 
+                <but>  
+                    <moment> 50th min</moment>
+                </but>
+                <cartons_jaunes> 2 </cartons_jaunes>
+            </joueurs>
+        </externe>
+        </equipe>
+</jeu>
