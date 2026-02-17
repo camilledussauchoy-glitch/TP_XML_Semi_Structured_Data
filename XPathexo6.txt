@@ -1,0 +1,10 @@
+//COURS[INITULE='XML'] 
+ 
+Un élément intitulé qui contient la valeur texte
+
+//COURS[INITULE=XML]
+
+Deux éléments INTITULE et XML qui doivent contenir le même texte
+
+Si l'on met dans XML, le texte 'XML' 
+et dans INTITULE, le texte 'XML' aussi.

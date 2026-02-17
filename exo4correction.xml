@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE matches [
+
+    <!ELEMENT matches (match+)>
+
+    <!ELEMENT match (equipe, equipe, buts, cartons)>
+    <!ATTLIST match
+        id       ID     #REQUIRED
+        date     CDATA  #REQUIRED
+        domicile IDREF  #REQUIRED>
+
+    <!ELEMENT equipe (joueur+)>
+    <!ATTLIST equipe
+        id  ID    #REQUIRED
+        nom CDATA #REQUIRED>
+
+    <!ELEMENT joueur EMPTY>
+    <!ATTLIST joueur
+        id  ID    #REQUIRED
+        nom CDATA #REQUIRED>
+
+    <!ELEMENT buts (but*)>
+
+    <!ELEMENT but EMPTY>
+    <!ATTLIST but
+        joueur    IDREF       #REQUIRED
+        minute    CDATA       #REQUIRED
+        penalite  (oui|non)   "non">
+
+    <!ELEMENT cartons (carton*)>
+
+    <!ELEMENT carton EMPTY>
+    <!ATTLIST carton
+        joueur  IDREF          #REQUIRED
+        type    (jaune|rouge)  #REQUIRED
+        minute  CDATA          #REQUIRED>
+]>
+
+<matches>
+
+    <match id="m1" date="2020-01-18" domicile="eq1">
+
+        <!-- Équipe à domicile -->
+        <equipe id="eq1" nom="Paris Saint-Germain">
+            <joueur id="j1" nom="Kylian Mbappe"/>
+            <joueur id="j2" nom="Neymar"/>
+            <joueur id="j3" nom="Marco Verratti"/>
+        </equipe>
+
+        <!-- Équipe visiteuse -->
+        <equipe id="eq2" nom="Olympique de Marseille">
+            <joueur id="j4" nom="Dimitri Payet"/>
+            <joueur id="j5" nom="Florian Thauvin"/>
+            <joueur id="j6" nom="Steve Mandanda"/>
+        </equipe>
+
+        <!-- Buts marqués -->
+        <buts>
+            <but joueur="j1" minute="23" penalite="non"/>
+            <but joueur="j2" minute="45" penalite="oui"/>
+            <but joueur="j4" minute="67" penalite="non"/>
+            <but joueur="j1" minute="88" penalite="non"/>
+        </buts>
+
+        <!-- Cartons distribués -->
+        <cartons>
+            <carton joueur="j3" type="jaune" minute="34"/>
+            <carton joueur="j5" type="jaune" minute="55"/>
+            <carton joueur="j5" type="rouge" minute="78"/>
+        </cartons>
+
+    </match>
+
+</matches>

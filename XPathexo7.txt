@@ -1,0 +1,10 @@
+La différence entre : 
+//B[position() = 1]
+
+et 
+
+/descendant::B[position() = 1]
+
+Le premier part directement de B et regarde si position est 1
+alors que le deuxième prend le risque d'avoir d'autre descendants qui ont aussi B 
+mais pas postion donc cela ne revient pas au même 
